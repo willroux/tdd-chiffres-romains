@@ -4,3 +4,6 @@ project/target
 target
 tmp
 *~
+TDD.aux
+TDD.log
+TDD.out
