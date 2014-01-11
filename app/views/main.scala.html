@@ -4,7 +4,7 @@
 
 <html>
     <head>
-        <title>Form samples</title>
+        <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
@@ -15,26 +15,22 @@
         <div class="topbar">
             <div class="fill">
                 <div class="container">
-                    <a class="brand" href="@routes.Application.index()">Forms</a>
+                    <a class="brand" href="@routes.Application.index()">Convertisseurs</a>
                     <ul class="nav">
-                        <li class="@("active".when(nav == "signup"))">
-                            <a href="@routes.SignUp.blank()">Sign up</a>
+                        <li class="@("active".when(nav == "romain"))">
+                            <a href="@routes.ConvEnRomain.blank()">En Romain</a>
                         </li>
-                        <li class="@("active".when(nav == "contact"))">
-                            <a href="@routes.Contacts.blank()">Contacts</a>
+                        <li class="@("active".when(nav == "decimal"))">
+                            <a href="@routes.ConvEnDecimal.blank()">En Décimal</a>
                         </li>
-						<li class="@("active".when(nav == "wizard"))">
-	                        <a href="@routes.Wizard.step(1)">Wizard</a>
-	                    </li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="container">
-
+@if(! nav.equals("")) {                
             <div class="content">
-                
                 <div class="page-header">
                     <h1>@title</h1>
                 </div>
@@ -44,9 +40,8 @@
                         @content
                     </div>
                 </div>
-                
             </div>
-
+}
             <footer>
                 <p>
                     <a href="http://www.playframework.com">www.playframework.com</a>
