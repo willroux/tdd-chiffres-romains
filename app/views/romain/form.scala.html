@@ -20,11 +20,11 @@
     @reponse
 
     @helper.form(action = routes.ConvEnRomain.submit) {
-	@inputText(
-	    formulaire("valeur"),
-	    '_label -> "Valeur",
-	    '_help  -> "Entrez un entier > 0"
-	)
+    	@inputText(
+    	    formulaire("valeur"),
+    	    '_label -> "Valeur",
+    	    '_help  -> "Entrez un entier > 0"
+    	)
         
         <div class="actions">
             <input type="submit" class="btn primary" value="Convertir">

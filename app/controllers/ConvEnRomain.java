@@ -26,18 +26,18 @@ public class ConvEnRomain extends Controller {
      */
     public static Result submit() {
         Form<NombreDecimal> formulaire_plein = formulaire.bindFromRequest();
-	int n=-1;
-	boolean valide = true;
+    	int n=-1;
+    	boolean valide = true;
 
-	try { n = Integer.parseInt(formulaire_plein.field("valeur").value()); }
-	catch (NumberFormatException e) { valide = false; }
-        
+    	try { n = Integer.parseInt(formulaire_plein.field("valeur").value()); }
+    	catch (NumberFormatException e) { valide = false; }
+            
         // vérifier les conditions d'acceptation
-	if (! valide) {
-	    formulaire_plein.reject("valeur", "la valeur doit être un nombre");
-	}
-	else if (n <= 0) {
-	    formulaire_plein.reject("valeur", "la valeur doit etre strictement positive");
+    	if (! valide) {
+    	    formulaire_plein.reject("valeur", "la valeur doit être un nombre");
+    	}
+    	else if (n <= 0) {
+    	    formulaire_plein.reject("valeur", "la valeur doit etre strictement positive");
         }
         
         if (formulaire_plein.hasErrors()) {
