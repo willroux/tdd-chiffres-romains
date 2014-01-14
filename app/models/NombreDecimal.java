@@ -13,13 +13,15 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-    	if(this.valeur==1){
-    		return "I";
-    	}else if(this.valeur==2){
-    		return "II";
-    	}else
-    		{
-			return "";
-		}
+    	String[] chiffresRomains = new String[5];
+
+        chiffresRomains[0] = "";
+        chiffresRomains[1] = "I";
+        chiffresRomains[2] = "II";
+        chiffresRomains[3] = "III";
+        chiffresRomains[4] = "IV";
+        chiffresRomains[5] = "V";
+
+        return chiffresRomains[this.valeur];
     }
 }
