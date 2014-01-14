@@ -13,7 +13,7 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-    	String[] chiffresRomains = new String[5];
+    	String[] chiffresRomains = new String[200];
 
         chiffresRomains[0] = "";
         chiffresRomains[1] = "I";
