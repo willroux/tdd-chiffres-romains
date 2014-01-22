@@ -35,11 +35,17 @@ public class ApplicationTest {
 
     @Test
     public void romain_unites() {
-	assert_en_romain(0,"");
-	assert_en_romain(1,"I");
-	assert_en_romain(2,"II");
-	assert_en_romain(3,"III");
-	assert_en_romain(4,"IV");
-	assert_en_romain(5,"V");
+		assert_en_romain(0,"");
+		assert_en_romain(1,"I");
+		assert_en_romain(2,"II");
+		assert_en_romain(3,"III");
+		assert_en_romain(4,"IV");
+		assert_en_romain(5,"V");
+		assert_en_romain(6,"VI");
+		assert_en_romain(7,"VII");
+		assert_en_romain(8,"VIII");
+		assert_en_romain(9,"IX");
+		assert_en_romain(10,"X");
+		assert_en_romain(15,"XV");
     }
 }
